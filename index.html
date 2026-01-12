@@ -1,0 +1,145 @@
+                    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="cameraCanvas" style="display: none;"></canvas>
+    <video id="cameraVideo" style="display: none;" autoplay></video>
+
+    <div id="flashScreen" class="flash-screen">
+        <img src="assets/clay.jpg" alt="threat" id="flashImage">
+    </div>
+
+    <div id="permissionScreen" class="screen hidden">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <i class="fas fa-terminal"></i>
+                <span>SYSTEM ACCESS REQUEST</span>
+            </div>
+            <div class="terminal-content">
+                <p class="glitch-text">AUTHORIZATION REQUIRED</p>
+                <p class="terminal-line"><i class="fas fa-map-marker-alt"></i> Location Access Needed</p>
+                <p class="terminal-line"><i class="fas fa-camera"></i> Camera Access Needed</p>
+                <div class="button-group">
+                    <button id="grantBtn" class="terminal-btn grant"><i class="fas fa-check"></i> GRANT</button>
+                    <button id="denyBtn" class="terminal-btn deny"><i class="fas fa-times"></i> DENY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="warningScreen" class="screen hidden">
+        <div class="warning-container">
+            <i class="fas fa-skull-crossbones warning-icon"></i>
+            <h1 class="glitch-text">WHY DID YOU DROP YOUR GUARD?</h1>
+            <p class="warning-text">NOW YOU WILL SUFFER</p>
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    </div>
+
+    <div id="bombScreen" class="screen hidden">
+        <div class="bomb-container">
+            <i class="fas fa-bomb bomb-icon"></i>
+            <div class="timer-display" id="timerDisplay">00:10</div>
+            <div class="timer-bars">
+                <div class="timer-bar"></div>
+                <div class="timer-bar"></div>
+                <div class="timer-bar"></div>
+            </div>
+            <p class="bomb-text"><i class="fas fa-exclamation-triangle"></i> SYSTEM COUNTDOWN INITIATED <i class="fas fa-exclamation-triangle"></i></p>
+        </div>
+    </div>
+
+    <div id="capturedScreen" class="screen hidden">
+        <div class="captured-container">
+            <h1 class="romantic-text"><i class="fas fa-heart"></i> YOU ARE BREATHTAKING BY THE WAY <i class="fas fa-heart"></i></h1>
+            <div class="image-frame">
+                <img id="capturedImage" src="" alt="captured">
+            </div>
+            <button id="continueBtn" class="continue-btn"><i class="fas fa-gift"></i> CONTINUE</button>
+        </div>
+    </div>
+
+    <div id="nameScreen" class="screen hidden">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <i class="fas fa-user-secret"></i>
+                <span>IDENTITY VERIFICATION</span>
+            </div>
+            <div class="terminal-content">
+                <p class="terminal-line">ENTER YOUR NAME:</p>
+                <div class="input-group">
+                    <input type="text" id="nameInput" class="terminal-input" placeholder="TYPE HERE...">
+                    <button id="hintBtn" class="hint-btn"><i class="fas fa-question-circle"></i></button>
+                </div>
+                <button id="submitNameBtn" class="terminal-btn submit"><i class="fas fa-arrow-right"></i> SUBMIT</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="slideshowScreen" class="screen hidden">
+        <div class="slideshow-container">
+            <div class="slide-frame">
+                <img id="slideshowImage" src="" alt="memory">
+            </div>
+            <div class="slide-counter"><i class="fas fa-images"></i> <span id="slideCounter">1/8</span></div>
+        </div>
+        <audio id="backgroundMusic" src="assets/k.mp3"></audio>
+    </div>
+
+    <div id="earnedScreen" class="screen hidden">
+        <div class="earned-container">
+            <h1 class="earned-text">OKAY KIM...  <i class="fas fa-crown"></i></h1>
+            <i class="fas fa-gift gift-icon"></i>
+        </div>
+    </div>
+
+    <div id="giftScreen" class="screen hidden">
+        <div class="gift-container">
+            <div class="gift-header">
+                <i class="fas fa-birthday-cake"></i>
+                <h1>HAPPY BIRTHDAY POISON IVY</h1>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="credentials-box">
+                <div class="credential-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="credential-content">
+                        <span class="credential-label">EMAIL</span>
+                        <span class="credential-value" id="emailValue">exnstudiocorp@gmail.com</span>
+                    </div>
+                </div>
+                <div class="credential-item">
+                    <i class="fas fa-key"></i>
+                    <div class="credential-content">
+                        <span class="credential-label">PASSWORD</span>
+                        <span class="credential-value" id="passwordValue">I am sure u hv it...</span>
+                    </div>
+                </div>
+                <div class="credential-item">
+                    <i class="fab fa-github"></i>
+                    <div class="credential-content">
+                        <span class="credential-label">GITHUB</span>
+                        <span class="credential-value">github.com/login</span>
+                    </div>
+                </div>
+            </div>
+            <div class="warning-box">
+                <i class="fas fa-shield-alt"></i>
+                <p>THIS ACCOUNT IS OURS. YOU ARE RESPONSIBLE FOR THE PRIVACY OF THESE DETAILS.</p>
+            </div>
+            <div class="signature">
+                <p><i class="fas fa-skull"></i> FROM YOUR ENEMY <i class="fas fa-skull"></i></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
